@@ -1,0 +1,49 @@
+@import 'null.scss';
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+    font-size: 30px;
+}
+.spollers-rod {
+    border: 3px solid #b54646;
+    
+
+}
+.spoller {
+    border: 4px solid #c79f28;
+		&__button {
+            position: relative;
+            border: 5px solid #3db51c;
+            &::after,&::before {
+                content: '';
+                width: 30px;
+                height: 5px;
+                background: #000;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                
+            }
+            &::before {
+                transform:translate(0, -50%) rotate(90deg);
+            }
+            &::after {
+                transform:translate(0, -50%);
+            }
+            &.rotate::after {
+                transform:translate(0, -50%) rotate(135deg);
+            }
+            &.rotate::before {
+                transform:translate(0, -50%) rotate(45deg);
+            }   
+		}
+
+		&__hidden {
+            max-height: 0;
+            overflow: hidden; 
+            transition: 2s;
+		}
+}
+

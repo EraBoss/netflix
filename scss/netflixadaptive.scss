@@ -1,0 +1,21 @@
+
+.container { 
+    //(1)
+    margin: 0 auto;
+    //0 select closed , email column , gtc 2, input w100 ,login m10
+    padding: 0 20px;
+}
+
+.container {
+    //(2)
+    margin: 0 auto;
+    //0 + select open , email row , gtc3 ,input mw376, login m10
+    padding: 0 30px;
+}
+
+.container {
+    //(3) 960
+    margin: 0 auto;
+    //0 + select open , email row , gtc3 ,input mw376 login m25
+    padding: 0 30px;
+}
