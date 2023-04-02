@@ -181,20 +181,20 @@ body, a {
 }
 
 .block-2__tv video {
-  width: 72%;
+  width: 73%;
   z-index: 1;
   position: absolute;
-  left: 49.5%;
+  left: 49.6%;
   top: 48%;
   transform: translate(-50%, -50%);
 }
 
 .block-4__devices video {
   position: absolute;
-  left: 49.5%;
+  left: 49.55%;
   top: 33.5%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 61.5%;
 }
 
 .block-6__title {
@@ -255,24 +255,28 @@ body, a {
 }
 
 .block {
-  background: #000;
+  background: #000000;
   padding: 72px 0;
 }
 
 .block-section {
   display: flex;
   align-items: center;
-  margin: 0 -6px;
+  flex-direction: column;
+  margin: -6px 0;
 }
 
 .block-text {
-  padding: 0 6px;
+  text-align: center;
   flex: 0 0 50%;
+  order: 1;
+  margin: 6px 0;
 }
 
 .block-img {
+  margin: 6px 0;
+  order: 2;
   position: relative;
-  padding: 0 6px;
   flex: 0 0 50%;
 }
 .block-img img {

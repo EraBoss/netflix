@@ -1,4 +1,4 @@
-
+/*
 .container { 
     //(1)
     margin: 0 auto;
@@ -18,4 +18,38 @@
     margin: 0 auto;
     //0 + select open , email row , gtc3 ,input mw376 login m25
     padding: 0 30px;
+}
+*/
+
+@media(max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media(max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media(min-width:992px) {
+    .block-section {
+        flex-direction: row;
+        margin: 0 -6px;
+    }
+    .block-text {
+        text-align: left;
+        order: 1;
+        margin: 0 6px;
+    }
+    .block-img {
+        margin: 0 6px;
+        order: 1;
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        max-width: none;
+    }
 }
