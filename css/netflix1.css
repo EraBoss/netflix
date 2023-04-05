@@ -136,7 +136,6 @@ body, a {
   justify-content: center;
 }
 .block-1__input-email {
-  overflow: hidden;
   position: relative;
 }
 .block-1__input {
