@@ -63,7 +63,7 @@ body,a {
         margin-left: 24px;
         a {
             font-weight: 500;
-            font-size: 0.875rem;
+            font-size: 14px;
         }
 	}
     //text content
@@ -92,13 +92,12 @@ body,a {
         width: 376px;
         height: 58px;
         background-color: rgba(26, 26, 26, 0.8);
-        //padding: 25px 16px 8px;
-        font-size: 1rem;
+        font-size: 16px;
         border-radius: 5px;
         border: 1px solid #9c9c9c;
         color: #fff;
-        line-height: 1.5rem;
-        padding: 1.5rem 1rem 0.5rem;
+        line-height: 24px;
+        padding: 24px 16px 8px;
         &:focus {
             box-shadow: 0 0 0 4px #ffffff;
             outline: 2.5px solid #000000;
@@ -106,7 +105,7 @@ body,a {
         }
         &:focus + .block-1__placeholder, &:not(:placeholder-shown) + .block-1__placeholder {
             top: 10px;
-            font-size: 0.8rem;
+            font-size: 12.8px;
         }
     }
 
@@ -123,7 +122,7 @@ body,a {
 
 	&__button-link {
         display: flex;
-        font-size: 1.5rem;
+        font-size: 24px;
         background-color: red;
         height: 58px;
         width: 200px;
@@ -309,18 +308,18 @@ body,a {
 .header {
 }
 .title {
-    font-size: 3rem;
+    font-size: 40px;
     font-weight: bold;
     line-height: 1.4;
 }
 .subtitle {
     margin-top: 16px;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.4;
 }
 .para {
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -348,7 +347,7 @@ body,a {
     &__link {
         line-height: 1.7;
         color: rgba(255, 255, 255, 0.7);
-        font-size: 0.875rem;
+        font-size: 14px;
         text-decoration: underline;
         &_no-link {
             margin-top: 30px;
@@ -373,7 +372,7 @@ body,a {
         padding-left: 35px;
         width: 136px;
         height: 32px;
-        font-size: 1rem;
+        font-size: 16px;
         background: rgba(0, 0, 0, 0.5);
         color: #fff;
         border: 1px solid #696969;

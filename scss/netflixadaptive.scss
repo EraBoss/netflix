@@ -86,22 +86,108 @@
 
 @media(max-width:600px) {
     .block-1 {
-        &__title {
-            margin-top: 110px;
-        }
         &__registration { 
             
 	    }
 	    &__input-email {
             position: relative;
+            width: 100%;
 	    }
     
         &__input {
-            width: 376px;
-            height: 58px;                     
+            width: 100%;
+            //max-width: 376px;                    
         }
         &__button-link {
-            margin: 15px 0 0 0;
+            align-self: start;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__header-login-link {
+            margin-left: 10px;
+        }
+        &__header-logo {
+        
+            img {
+                pointer-events: none;
+                width: 120px; 
+                height: 32px;
+            }
+        }
+        
+    }
+    .choose-language {
+        width: fit-content;
+        position: relative;
+        &__buttton {
+            text-align: center;
+            padding-left: 3px;
+            width: 70px;
+            height: 32px; 
+            overflow: hidden;
+            font-size: 0;
+            option {
+                font-size: 1rem;
+                background-color: #fff;
+            }
         }
     }
+} 
+@media(max-width:380px) {
+    .block-1 {
+        &__registration { 
+            
+	    }
+	    &__input-email {
+            position: relative;
+            width: 100%;
+	    }
+    
+        &__input {
+            width: 100%;
+            //max-width: 376px;                    
+        }
+        &__button-link {
+            align-self: start;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+        &__header-login-link {
+            margin-left: 10px;
+        }
+        &__header-logo {
+            margin: 0 15px 8px 0;
+            img {
+                pointer-events: none;
+                width: 120px; 
+                height: 32px;
+            }
+        }
+        
+    }
+    .choose-language {
+        width: fit-content;
+        position: relative;
+        &__buttton {
+            text-align: center;
+            padding-left: 3px;
+            width: 70px;
+            height: 32px; 
+            overflow: hidden;
+            font-size: 0;
+            option {
+                font-size: 1rem;
+                background-color: #fff;
+            }
+        }
+    }
+    
+        
 } 
