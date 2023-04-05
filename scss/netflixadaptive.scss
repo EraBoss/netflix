@@ -32,6 +32,11 @@
         max-width: 750px;
         padding: 0 50px;
     }
+    .block-1 {
+        &__title {
+            margin-top: 170px;
+        }
+    }
 }
 
 @media(min-width:992px) {
@@ -55,4 +60,48 @@
         max-width: none;
         padding: 0 40px;
     }
-}
+    .block-1 {
+        &__title {
+            margin-top: 110px;
+        }
+        &__registration { 
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+	    }
+	    &__input-email {
+            position: relative;
+	    }
+    
+        &__input {
+            width: 376px;
+            height: 58px;                     
+        }
+        &__button-link {
+            margin: 15px 0 0 0;
+        }
+    }
+} 
+
+@media(max-width:600px) {
+    .block-1 {
+        &__title {
+            margin-top: 110px;
+        }
+        &__registration { 
+            
+	    }
+	    &__input-email {
+            position: relative;
+	    }
+    
+        &__input {
+            width: 376px;
+            height: 58px;                     
+        }
+        &__button-link {
+            margin: 15px 0 0 0;
+        }
+    }
+} 

@@ -22,16 +22,15 @@ body,a {
         }
 }
 .block-1 {
-    height: 700px;
     background: url('../imgs/others/netflix1eng.jpg') no-repeat ;
     background-size: cover;
     background-position: center center;
     //bg filter
     &__filter {
-        padding-top: 23px;
+        padding: 23px 0;
         background: rgba(0, 0, 0, 0.4);
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.8) 100%);
-        height: 700px;  
+        min-height: 700px;  
     }
 	&__header {
         display: flex;
@@ -80,9 +79,9 @@ body,a {
 	&__para {
         margin-top: 28px;
 	}
-	&__registration {
+	&__registration { 
         display: flex;
-        margin-top: 20px;
+        margin: 20px 0;
         justify-content: center;
 	}
 	&__input-email {
@@ -221,7 +220,7 @@ body,a {
             background: rgb(77, 77, 77);
         }
         line-height: 1.5;
-        padding: 24px;
+        padding: 24px 60px 24px 24px;
         background: rgb(45, 45, 45);
         position: relative;
         &::before,&::after {
@@ -276,6 +275,7 @@ body,a {
 .block {
     background: #000000;
     padding: 72px 0;
+    border-top: 8px solid #1f1f1f;
 }
 .block-section {
     display: flex;
@@ -323,15 +323,9 @@ body,a {
     font-size: 1.25rem;
     font-weight: 400;
 }
-.split {
-    height: 8px;
-    background-color: #1f1f1f;
-}
-.padd {
-    height: 72px;
-    background: #000;
-}
+
 .footer {
+    border-top: 8px solid #1f1f1f;
     padding: 60px 0;
     background: #000;
     &__main-link {
