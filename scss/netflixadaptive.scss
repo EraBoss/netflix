@@ -55,6 +55,9 @@
 
 @media(max-width:600px) {
     .block-1 {
+        &__filter {
+            min-height: 600px;
+        }
 	    &__input-email {          
             width: 100%;
 	    }
@@ -76,6 +79,18 @@
         }
         
     }
+    .block-6 {   
+        &__spoller-container {
+            font-size: 18px;
+        }
+        &__spoller-button {
+            padding: 24px 60px 24px 24px;
+            &::before,&::after {
+                width: 16px;
+                height: 2px;
+            }
+        }
+    }
     .choose-language {
         &__buttton {
             padding-left: 3px;
@@ -87,9 +102,24 @@
             }
         }
     }
+    .title {
+        font-size: 32px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .para {
+        font-size: 16px;
+    }
 } 
 @media(max-width:380px) {
     .block-1 {
+        &__filter {
+            min-height: auto;
+        }
+        &__title {
+            margin-top: 70px;
+        }  
         &__header {
             align-items: start;
             flex-wrap: wrap;

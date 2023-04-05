@@ -23,7 +23,7 @@ document.addEventListener('click', function (params) {
                 el.previousElementSibling.classList.remove('rotate');
             })
             params.target.nextElementSibling.style.padding = '24px';
-            params.target.nextElementSibling.style.maxHeight = params.target.nextElementSibling.scrollHeight + 48 + 'px';
+            params.target.nextElementSibling.style.maxHeight = params.target.nextElementSibling.scrollHeight + 300 + 'px';
             params.target.classList.add('rotate');
         }
     };

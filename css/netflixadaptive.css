@@ -46,6 +46,9 @@
   }
 }
 @media (max-width: 600px) {
+  .block-1__filter {
+    min-height: 600px;
+  }
   .block-1__input-email {
     width: 100%;
   }
@@ -62,6 +65,16 @@
     width: 120px;
     height: 32px;
   }
+  .block-6__spoller-container {
+    font-size: 18px;
+  }
+  .block-6__spoller-button {
+    padding: 24px 60px 24px 24px;
+  }
+  .block-6__spoller-button::before, .block-6__spoller-button::after {
+    width: 16px;
+    height: 2px;
+  }
   .choose-language__buttton {
     padding-left: 3px;
     width: 70px;
@@ -71,8 +84,23 @@
   .choose-language__buttton option {
     font-size: 16px;
   }
+  .title {
+    font-size: 32px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .para {
+    font-size: 16px;
+  }
 }
 @media (max-width: 380px) {
+  .block-1__filter {
+    min-height: auto;
+  }
+  .block-1__title {
+    margin-top: 70px;
+  }
   .block-1__header {
     align-items: start;
     flex-wrap: wrap;
