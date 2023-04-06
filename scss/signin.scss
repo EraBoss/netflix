@@ -1,4 +1,8 @@
 @import 'null.scss';
+
+body {
+    font-family: 'Netflix Sans';
+}
 .choose-language {
     width: fit-content;
     position: relative;
@@ -50,23 +54,6 @@ select::-ms-expand {
     max-width: 1352px;
     padding: 0 90px;
 }
-
-.title {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 1.4;
-}
-.subtitle {
-    margin-top: 16px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.4;
-}
-.para {
-    font-size: 20px;
-    font-weight: 400;
-}
-
 .footer {
     padding: 30px 0 50px;
     background: rgba(0,0,0,.75);
@@ -101,3 +88,133 @@ select::-ms-expand {
         }
     }
 }
+
+.block-1 {
+    &__input-email {
+        position: relative;
+        margin-bottom: 18px;
+	}
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        background: #333;
+        font-size: 18px;
+        border-radius: 5px;
+        color: #fff;
+        line-height: 24px;
+        padding: 24px 16px 8px;      
+        &:focus + .block-1__placeholder, &:not(:placeholder-shown) + .block-1__placeholder {
+            top: 8px;
+            font-size: 12px;
+        }
+    }
+
+    &__placeholder {
+        font-size: 16px;
+        pointer-events: none;
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        transition-property: top, font-size, line-height;
+        transition-duration: 250ms;   
+        transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+        color: #8c8c8c;
+    }
+    &__button-link {
+        color: #fff;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        font-size: 16px;
+        background-color: red;
+        height: 50px;
+        border-radius: 5px;  
+        justify-content: center;
+        align-items: center;   
+        font-weight: 900;    
+        margin: 40px 0 12px;
+	}
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(../imgs/others/KZ-en-20230403-popsignuptwoweeks-perspective_alpha_website_large.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__bg-filter {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.header {
+    padding:25px 0;
+		&__logo-link {
+            color: red;
+            margin-left: 3%;
+		}
+        img {
+            pointer-events: none;
+            width: 167px; 
+            height: 45px;
+        }
+}
+.main {
+    flex: 1 1 auto;
+		&__sign {
+            background: rgba(0,0,0,.75);
+            min-height: 660px;
+            max-width: 450px;
+            margin: 0 auto 90px;
+            border-radius: 10px;
+            padding:60px 68px 40px;
+		}
+}
+.sign {
+    form {
+        min-height: 330px;
+    }
+
+		&__title {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 28px;
+            font-weight: bold;
+		}
+
+		&__remember-me {
+            display: flex;
+            justify-content: space-between;
+            color: #b3b3b3;
+            margin-bottom: 20px;
+            font-size: 13px;
+            a {
+                color: #b3b3b3;
+                font-size: 13px;
+            }
+		}
+
+		&__checkbox {
+		}
+
+		&__subtitle {
+            margin-bottom: 12px;
+            color: #737373;
+            font-size: 16px;
+            a {
+                color: #fff;
+                font-size: 16px;
+            }
+		}
+
+		&__para {
+            color: #8c8c8c;
+            font-size: 13px;
+            a {
+                color: #0071eb;
+                font-size: 13px;
+            }
+		}
+}
+
