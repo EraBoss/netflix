@@ -344,6 +344,7 @@ body, a {
   text-decoration: underline;
 }
 .footer__link_no-link {
+  font-size: 14px;
   margin-top: 30px;
   color: rgba(255, 255, 255, 0.7);
 }
