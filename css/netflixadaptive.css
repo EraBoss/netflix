@@ -58,7 +58,7 @@
   .block-1__button-link {
     align-self: start;
   }
-  .block-1__header-login-link {
+  .block-1__header-login-link a {
     margin-left: 10px;
   }
   .block-1__header-logo img {

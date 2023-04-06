@@ -69,7 +69,9 @@
             align-self: start;
         }
         &__header-login-link {
-            margin-left: 10px;
+            a {
+                margin-left: 10px;
+            }
         }
         &__header-logo {
             img {
