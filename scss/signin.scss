@@ -176,7 +176,6 @@ select::-ms-expand {
     form {
         min-height: 330px;
     }
-
 		&__title {
             color: #fff;
             font-size: 32px;
@@ -198,6 +197,9 @@ select::-ms-expand {
 
 		&__checkbox {
 		}
+        &__text { 
+            
+        }
 
 		&__subtitle {
             margin-bottom: 12px;
