@@ -309,8 +309,6 @@ body,a {
     max-width: 1352px;
     padding: 0 90px;
 }
-.header {
-}
 .title {
     font-size: 40px;
     font-weight: bold;
@@ -356,7 +354,6 @@ body,a {
         text-decoration: underline;
         &_no-link {
             margin-top: 30px;
-            font-size: 0.875rem;
             color: rgba(255, 255, 255, 0.7);
         }
     }
