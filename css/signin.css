@@ -124,7 +124,8 @@ select::-ms-expand {
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1100px;
+  padding: 0 50px;
 }
 
 .footer {
