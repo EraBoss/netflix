@@ -79,24 +79,24 @@ body {
   position: relative;
 }
 .choose-language__buttton {
-  padding-left: 35px;
-  width: 136px;
-  height: 32px;
-  font-size: 16px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: 1px solid #696969;
-  border-radius: 5px;
+  padding-left: 50px;
+  width: 130px;
+  height: 48px;
+  font-size: 13px;
+  background: #000;
+  color: #737373;
+  border: 1px solid #333;
+  border-radius: 2px;
 }
 .choose-language__buttton:focus {
-  box-shadow: 0 0 0 4px #ffffff;
-  outline: 2.5px solid #000000;
+  box-shadow: 0 0 0 1px #ffffff;
 }
 .choose-language__buttton option {
-  background-color: #fff;
+  background: #000;
+  color: #999;
 }
 .choose-language__svg-container-1 {
-  color: #fff;
+  color: #999;
   pointer-events: none;
   position: absolute;
   left: 12px;
@@ -104,12 +104,12 @@ body {
   transform: translate(0, -45%);
 }
 .choose-language__svg-container-2 {
-  color: #fff;
+  color: #999;
   pointer-events: none;
   position: absolute;
-  right: 15px;
+  right: 10px;
   top: 50%;
-  transform: translate(0, -40%);
+  transform: translate(0, -50%);
 }
 
 select {
@@ -124,8 +124,7 @@ select::-ms-expand {
 
 .container {
   margin: 0 auto;
-  max-width: 1352px;
-  padding: 0 90px;
+  max-width: 1000px;
 }
 
 .footer {
@@ -143,7 +142,7 @@ select::-ms-expand {
 }
 .footer__section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
   margin-bottom: 36px;
   overflow-x: hidden;
