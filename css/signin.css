@@ -173,6 +173,6 @@ select::-ms-expand {
 }
 .footer__link_no-link {
   margin-top: 30px;
-  font-size: 0.875rem;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
 }
