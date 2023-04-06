@@ -38,4 +38,14 @@
                 height: 20px;
             }
     }
+    .main {
+            &__sign {
+                min-height: 500px;
+            }
+        }
+    .sign {
+        form {
+            min-height: auto;
+        }
+    }
 }

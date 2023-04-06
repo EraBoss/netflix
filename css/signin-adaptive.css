@@ -31,4 +31,10 @@
     width: 75px;
     height: 20px;
   }
+  .main__sign {
+    min-height: 500px;
+  }
+  .sign form {
+    min-height: auto;
+  }
 }
