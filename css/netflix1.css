@@ -165,6 +165,17 @@ body, a {
   transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
   color: rgba(255, 255, 255, 0.7);
 }
+.block-1__alert {
+  position: absolute;
+  left: 0;
+  top: 68px;
+  color: red;
+  display: none;
+  align-items: center;
+}
+.block-1__alert-svg {
+  margin-right: 8px;
+}
 .block-1__button-link {
   overflow: hidden;
   text-align: center;
@@ -179,6 +190,7 @@ body, a {
   align-items: center;
   font-weight: 900;
   margin-left: 10px;
+  color: #fff;
 }
 
 .block-2__tv video {

@@ -4,7 +4,7 @@ body,a {
     font-family: 'Netflix Sans';
 }
 
-.wrapper {
+.wrapper { 
     min-height: 100%;
     overflow-x: hidden;
 }
@@ -120,6 +120,20 @@ body,a {
         transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
         color: rgba(255, 255, 255, 0.7);
     }
+    
+	&__alert {
+        position: absolute;
+        left: 0;
+        top: 68px;
+        color: red;
+        display: none;
+        align-items: center;
+	}
+    &__alert-svg { 
+        margin-right: 8px;
+    }
+    &__alert-text {
+    }
 
 	&__button-link {
         overflow: hidden;
@@ -135,6 +149,7 @@ body,a {
         align-items: center;   
         font-weight: 900;    
         margin-left: 10px;
+        color: #fff;
 	}
 }
 
