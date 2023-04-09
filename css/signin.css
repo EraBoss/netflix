@@ -192,6 +192,13 @@ select::-ms-expand {
   transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
   color: #8c8c8c;
 }
+.block-1__sign-alert {
+  display: none;
+  color: #e87c03;
+  font-size: 13px;
+  padding: 6px 3px;
+  margin-bottom: -6px;
+}
 .block-1__button-link {
   color: #fff;
   overflow: hidden;
