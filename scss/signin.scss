@@ -212,13 +212,23 @@ select::-ms-expand {
             }
 		}
 
-		&__para {
+		&__para-1 {
             color: #8c8c8c;
             font-size: 13px;
-            a {
-                color: #0071eb;
-                font-size: 13px;
-            }
+            margin-bottom: 12px;
 		}
+        &__learnMore {
+            color: #0071eb;
+            font-size: 13px;
+        }
+        &__para-2 {
+            color: #8c8c8c;
+            font-size: 13px;
+            display: none;
+        }
+        &__link {
+            color: #0071eb;
+            font-size: 13px;
+        }
 }
 

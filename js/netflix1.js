@@ -37,6 +37,10 @@ document.addEventListener('click', function (params) {
         if(!params.target.previousElementSibling.firstElementChild.value) {
             params.target.previousElementSibling.firstElementChild.focus();
         }
+        let el = params.target.previousElementSibling.firstElementChild;
+        if(el.value.length > 4 && (el.value.includes('@') && el.value.includes('.'))) {
+            location.href = 'signin.html?loginSignIn=' + params.target.previousElementSibling.firstElementChild.value;
+        }
     }
 })
 inputsEmail.forEach((el)=> el.addEventListener('change', function (params1) {

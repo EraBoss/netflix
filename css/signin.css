@@ -276,11 +276,21 @@ select::-ms-expand {
   color: #fff;
   font-size: 16px;
 }
-.sign__para {
+.sign__para-1 {
   color: #8c8c8c;
   font-size: 13px;
+  margin-bottom: 12px;
 }
-.sign__para a {
+.sign__learnMore {
+  color: #0071eb;
+  font-size: 13px;
+}
+.sign__para-2 {
+  color: #8c8c8c;
+  font-size: 13px;
+  display: none;
+}
+.sign__link {
   color: #0071eb;
   font-size: 13px;
 }
