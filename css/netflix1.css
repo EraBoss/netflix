@@ -104,7 +104,7 @@ body, a {
 .block-1__header-section {
   display: flex;
 }
-.block-1__header-login-link a {
+.block-1__header-login-link {
   height: 32px;
   background-color: red;
   border-radius: 5px;

@@ -54,18 +54,16 @@ body,a {
 	&__header-select {
 	}
 	&__header-login-link {
-        a {
-            height: 32px;
-            background-color: red;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 77px;
-            margin-left: 24px;
-            font-weight: 500;
-            font-size: 14px;
-        }
+        height: 32px;
+        background-color: red;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 77px;
+        margin-left: 24px;
+        font-weight: 500;
+        font-size: 14px;
 	}
     //text content
 	&__section {
