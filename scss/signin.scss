@@ -1,0 +1,241 @@
+@import 'null.scss';
+
+body {
+    font-family: 'Netflix Sans';
+}
+.choose-language {
+    width: fit-content;
+    position: relative;
+    &__buttton {
+        padding-left: 50px;
+        width: 130px;
+        height: 48px;
+        font-size: 13px;
+        background: #000;
+        color: #737373;
+        border: 1px solid #333;
+        border-radius: 2px;   
+        &:focus {
+            box-shadow: 0 0 0 1px #ffffff;
+        }
+        option {
+            background: #000;
+            color: #999;
+        }
+    }
+    &__svg-container-1 {
+        color: #999;
+        pointer-events: none;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translate(0, -45%);
+    }
+    &__svg-container-2 {
+        color: #999;
+        pointer-events: none;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }  
+}
+
+select {
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  }
+select::-ms-expand {
+    display: none;
+}
+.container {
+    margin: 0 auto; 
+    max-width: 1100px;
+    padding: 0 50px;
+}
+.footer {
+    padding: 30px 0 50px;
+    background: rgba(0,0,0,.75);
+    &__main-link {
+        margin-bottom: 20px;
+        a {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #737373;
+            text-decoration: none;
+        }    
+    }
+    &__section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap: 10px;
+        margin-bottom: 36px;
+        overflow-x: hidden;
+    }
+    &__select {
+        margin-bottom: 24px;
+    }
+    &__link {
+        text-decoration: none;
+        line-height: 1.7;
+        color: #737373;
+        font-size: 14px;
+        &_no-link {
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+.block-1 {
+    &__input-email {
+        position: relative;
+        margin-bottom: 18px;
+	}
+
+    &__input {
+        width: 100%;
+        height: 50px;
+        background: #333;
+        font-size: 18px;
+        border-radius: 5px;
+        color: #fff;
+        line-height: 24px;
+        padding: 24px 16px 8px;      
+        &:focus + .block-1__placeholder, &:not(:placeholder-shown) + .block-1__placeholder {
+            top: 8px;
+            font-size: 12px;
+        }
+    }
+
+    &__placeholder {
+        font-size: 16px;
+        pointer-events: none;
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        transition-property: top, font-size, line-height;
+        transition-duration: 250ms;   
+        transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+        color: #8c8c8c;
+    }
+    &__sign-alert {
+        display: none;
+        color: #e87c03;
+        font-size: 13px;
+        padding: 6px 3px;
+        margin-bottom: -6px;
+    }
+    &__button-link {
+        color: #fff;
+        overflow: hidden;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        font-size: 16px;
+        background-color: red;
+        height: 50px;
+        border-radius: 5px;  
+        justify-content: center;
+        align-items: center;   
+        font-weight: 900;    
+        margin: 40px 0 12px;
+	}
+}
+.wrapper {
+    overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: url(../imgs/others/KZ-en-20230403-popsignuptwoweeks-perspective_alpha_website_large.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__bg-filter {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.header {
+    padding:25px 0;
+		&__logo-link {
+            display: block;
+            color: red;
+            margin-left: 3%;
+		}
+        img {
+            pointer-events: none;
+            width: 167px; 
+            height: 45px;
+        }
+}
+.main {
+    flex: 1 1 auto;
+		&__sign {
+            background: rgba(0,0,0,.75);
+            min-height: 660px;
+            max-width: 450px;
+            margin: 0 auto 90px;
+            border-radius: 10px;
+            padding:60px 68px 40px;
+		}
+}
+.sign {
+    form {
+        min-height: 330px;
+    }
+		&__title {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 28px;
+            font-weight: bold;
+		}
+
+		&__remember-me {
+            display: flex;
+            justify-content: space-between;
+            color: #b3b3b3;
+            margin-bottom: 20px;
+            font-size: 13px;
+            a {
+                color: #b3b3b3;
+                font-size: 13px;
+            }
+		}
+
+		&__checkbox {
+		}
+        &__text { 
+            
+        }
+
+		&__subtitle {
+            margin-bottom: 12px;
+            color: #737373;
+            font-size: 16px;
+            a {
+                color: #fff;
+                font-size: 16px;
+            }
+		}
+
+		&__para-1 {
+            color: #8c8c8c;
+            font-size: 13px;
+            margin-bottom: 12px;
+		}
+        &__learnMore {
+            color: #0071eb;
+            font-size: 13px;
+        }
+        &__para-2 {
+            color: #8c8c8c;
+            font-size: 13px;
+            display: none;
+        }
+        &__link {
+            color: #0071eb;
+            font-size: 13px;
+        }
+}
+

@@ -1,21 +1,136 @@
 
-.container { 
-    //(1)
-    margin: 0 auto;
-    //0 select closed , email column , gtc 2, input w100 ,login m10
-    padding: 0 20px;
+@media(max-width:1200px) {
+    .container {
+        max-width: 970px;
+        padding: 0 60px;
+    }
+}
+@media(max-width:992px) {
+    .container {
+        max-width: 750px;
+        padding: 0 50px;
+    }
+    .block-1 {
+        &__title {
+            margin-top: 170px;
+        }
+    }
 }
 
-.container {
-    //(2)
-    margin: 0 auto;
-    //0 + select open , email row , gtc3 ,input mw376, login m10
-    padding: 0 30px;
+@media(min-width:992px) {
+    .block-section {
+        flex-direction: row;
+        margin: 0 -6px;
+    }
+    .block-text {
+        text-align: left;
+        order: 1;
+        margin: 0 6px;
+    }
+    .block-img {
+        margin: 0 6px;
+        order: 1;
+    }
 }
 
-.container {
-    //(3) 960
-    margin: 0 auto;
-    //0 + select open , email row , gtc3 ,input mw376 login m25
-    padding: 0 30px;
-}
+@media(max-width:768px) {
+    .container {
+        max-width: none;
+        padding: 0 40px;
+    }
+    .block-1 {
+        &__title {
+            margin-top: 110px;
+        }
+        &__registration { 
+            margin-top: 20px;
+            align-items: center;
+            flex-direction: column;
+	    }   
+        &__button-link {
+            margin: 15px 0 0 0;
+        }
+    }
+} 
+
+@media(max-width:600px) {
+    .block-1 {
+        &__filter {
+            min-height: 600px;
+        }
+	    &__input-email {          
+            width: 100%;
+	    }
+    
+        &__input {
+            width: 100%;                   
+        }
+        &__button-link {
+            align-self: start;
+        }
+        &__header-login-link {
+            a {
+                margin-left: 10px;
+            }
+        }
+        &__header-logo {
+            img {
+                width: 120px; 
+                height: 32px;
+            }
+        }
+        
+    }
+    .block-6 {   
+        &__spoller-container {
+            font-size: 18px;
+        }
+        &__spoller-button {
+            padding: 24px 60px 24px 24px;
+            &::before,&::after {
+                width: 16px;
+                height: 2px;
+            }
+        }
+    }
+    .choose-language {
+        &__buttton {
+            padding-left: 3px;
+            width: 70px;
+            overflow: hidden;
+            font-size: 0;
+            option {
+                font-size: 16px;
+            }
+        }
+    }
+    .title {
+        font-size: 32px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .para {
+        font-size: 16px;
+    }
+} 
+@media(max-width:380px) {
+    .block-1 {
+        &__filter {
+            min-height: auto;
+        }
+        &__title {
+            margin-top: 70px;
+        }  
+        &__header {
+            align-items: start;
+            flex-wrap: wrap;
+        }
+        &__header-logo {
+            margin: 0 15px 8px 0;
+            img {
+            }
+        }
+        
+    }    
+} 

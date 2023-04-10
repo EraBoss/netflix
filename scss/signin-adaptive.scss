@@ -1,0 +1,51 @@
+@media(max-width:739px) {
+    .wrapper {
+        background: none;
+        &__bg-filter {
+            background: #000;
+        }
+    }
+
+    .main {
+        flex: 1 1 auto;
+            &__sign {
+                background: none;
+                min-height: 550px;
+                max-width: 1100px;
+                margin: 0 auto ;
+                border-radius: none;
+                padding:20px 5% 30px;
+            }
+    }
+    .sign {
+        form {
+        }
+    }
+    .footer {
+        border: 1px solid #737373;
+    }
+    .container {
+        padding: 0 5%;
+    }
+}
+@media(max-width:440px) {
+    .header {
+        padding: 20px 0 10px;
+            &__logo-link {
+            }
+            img {
+                width: 75px; 
+                height: 20px;
+            }
+    }
+    .main {
+            &__sign {
+                min-height: 480px;
+            }
+        }
+    .sign {
+        form {
+            min-height: auto;
+        }
+    }
+}
