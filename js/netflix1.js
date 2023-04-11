@@ -47,7 +47,7 @@ inputsEmail.forEach((el)=> el.addEventListener('change', function (params1) {
     if(el.value.length <= 4) {
         el.parentElement.lastElementChild.style.display = 'flex';
         el.style.border = '1px solid red';
-        el.parentElement.lastElementChild.lastElementChild.innerHTML = 'Email is required!'
+        el.parentElement.lastElementChild.lastElementChild.innerHTML = 'Email is required!';
     } else if(el.value.length > 4 && !(el.value.includes('@') && el.value.includes('.'))) {
         el.parentElement.lastElementChild.style.display = 'flex';
         el.style.border = '1px solid red';
