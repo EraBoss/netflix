@@ -1,0 +1,76 @@
+@import 'null.scss';
+
+body {
+    font-family: 'Netflix Sans','Helvetica Neue','Segoe UI','Roboto,Ubuntu','sans-serif';
+}
+
+.header {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    background-color: #141414;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+    }
+
+    &__logo {
+    }
+
+    &__logo-img {
+        width: 92.5px;
+    }
+
+    &__nav {
+        margin-left: 40px;
+        display: flex;
+        align-self: center;
+        gap: 20px;
+    }
+
+    &__nav-link {
+        color:#fff;
+    }
+
+    &__navigation-icons {
+        display: flex;
+        gap: 20px;
+        align-self: center;
+    }
+
+    &__search {
+        background: 0;
+    }
+
+    &__search-icon {
+        color:#fff;
+    }
+
+    &__bell {
+        background: 0;
+    }
+
+    &__bell-icon {
+        color:#fff;
+    }
+
+    &__account {
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__account-icon {
+        width: 32px;
+    }
+}
+.container {
+    padding: 0 4%;
+}

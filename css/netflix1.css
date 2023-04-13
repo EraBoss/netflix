@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body, a {
   color: #ffffff;
-  font-family: "Netflix Sans";
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto,Ubuntu", "sans-serif";
 }
 
 .wrapper {
