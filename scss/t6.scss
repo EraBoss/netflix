@@ -1,0 +1,38 @@
+body {
+    background: #bd9354;
+}
+.main {
+
+    &__title {
+    }
+}
+.swiper.slider {
+}
+
+.swiper-wrapper.slider-wrapper {
+}
+
+.swiper-slide.slider-slide {
+}
+
+.slide-content {
+    text-align: center;
+    img {
+        width: 200px;
+    }
+}
+
+.swiper-pagination.slider-pagination {
+}
+
+.swiper-button-prev.slider-button-prev::after {
+    color: rgb(255, 255, 255);
+}
+
+.swiper-button-next.slider-button-next::after {
+    color: rgb(255, 255, 255);
+}
+
+.swiper-scrollbar.slider-scrollbar {
+}
+

@@ -1,0 +1,18 @@
+body {
+  background: #bd9354;
+}
+
+.slide-content {
+  text-align: center;
+}
+.slide-content img {
+  width: 200px;
+}
+
+.swiper-button-prev.slider-button-prev::after {
+  color: rgb(255, 255, 255);
+}
+
+.swiper-button-next.slider-button-next::after {
+  color: rgb(255, 255, 255);
+}
