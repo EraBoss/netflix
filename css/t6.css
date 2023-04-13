@@ -1,12 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
 body {
   background: #bd9354;
 }
 
+.swiper.slider {
+  padding: 0 60px;
+}
+
+.h2pagination {
+  position: relative;
+}
+
+.swiper-slide.slider-slide {
+  width: 100%;
+}
+
 .slide-content {
   text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
 }
 .slide-content img {
-  width: 200px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  left: 0;
+  top: 0;
+}
+
+.swiper-pagination.slider-pagination {
+  max-width: 500px;
+  text-align: right;
+  top: auto;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  top: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  transform: translate(0, -50%);
+  gap: 2px;
+}
+.swiper-pagination.slider-pagination span {
+  border-radius: 0;
+  width: 20px;
+  height: 3px;
+}
+.swiper-pagination.slider-pagination span.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
 }
 
 .swiper-button-prev.slider-button-prev::after {

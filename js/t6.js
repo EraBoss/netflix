@@ -3,6 +3,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView:6,
     slidesPerGroup:6,
+    spaceBetween:10,
     //spaceVetween: 800,
     // If we need pagination
     pagination: {
@@ -15,8 +16,4 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     },
   
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
   });
