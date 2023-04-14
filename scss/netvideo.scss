@@ -6,15 +6,15 @@ body {
 }
 
 .header {
-    z-index: 11;
+    z-index: 3;
     padding: 20px 0;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: auto;
-    background: #141414;
-    transition: .3s;
+    background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    transition: .5s;
     &__body {
         display: flex;
         justify-content: space-between;
@@ -123,11 +123,15 @@ body {
 
 
 .swiper.slider {
-    padding: 0 60px;
+    padding: 30px 60px 30px;
 }
 .h2pagination {
-    position: relative;
-    padding: 0 60px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    left: 60px;
+    bottom: auto;
+    z-index: 2;
 }
 .swiper-wrapper.slider-wrapper {
 }
@@ -137,25 +141,21 @@ body {
 }
 
 .slide-content {
-    text-align: center;
     position: relative;
     padding-bottom: 56.25%;
     img {
         position: absolute;
         width: 100%;  
         height: 100%;
-        background-color: #000000;
         left: 0;
         top: 0;
-        //object-fit: cover;
     }
 }
 
 .swiper-pagination.slider-pagination {
-    top: auto;
-    right: 60px;
+    right: 0;
     left: auto;
-    bottom: 0;
+    bottom: auto;
     top: 50%;
     display: flex;
     justify-content: end;
