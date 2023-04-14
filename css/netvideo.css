@@ -72,16 +72,19 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto,Ubuntu", "sans-serif";
+  color: #ffffff;
 }
 
 .header {
+  z-index: 11;
   padding: 20px 0;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: auto;
-  background-color: #141414;
+  background: #141414;
+  transition: 0.3s;
 }
 .header__body {
   display: flex;
@@ -141,4 +144,69 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+.swiper.slider {
+  padding: 0 60px;
+}
+
+.h2pagination {
+  position: relative;
+  padding: 0 60px;
+}
+
+.swiper-slide.slider-slide {
+  width: 100%;
+}
+
+.slide-content {
+  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.slide-content img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  left: 0;
+  top: 0;
+}
+
+.swiper-pagination.slider-pagination {
+  top: auto;
+  right: 60px;
+  left: auto;
+  bottom: 0;
+  top: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  transform: translate(0, -50%);
+  gap: 2px;
+}
+.swiper-pagination.slider-pagination span {
+  border-radius: 0;
+  width: 15px;
+  height: 3px;
+}
+.swiper-pagination.slider-pagination span.swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 0.3;
+}
+.swiper-pagination.slider-pagination span.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+  opacity: 1;
+}
+
+.swiper-button-prev.slider-button-prev::after {
+  color: rgb(255, 255, 255);
+}
+
+.swiper-button-next.slider-button-next::after {
+  color: rgb(255, 255, 255);
 }
