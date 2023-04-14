@@ -131,3 +131,14 @@ body {
 .container {
   padding: 0 4%;
 }
+
+.billboard {
+  position: relative;
+  height: 56.25vw;
+}
+.billboard__bg {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
