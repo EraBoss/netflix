@@ -214,18 +214,25 @@ body {
   bottom: 0;
   background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0) 0, hsla(0, 0%, 8%, 0.15) 15%, hsla(0, 0%, 8%, 0.35) 29%, hsla(0, 0%, 8%, 0.58) 44%, #141414 68%, #141414);
 }
+.billboard__slider-section.slider-section {
+  margin: 0;
+}
 .slider-section {
-  padding-bottom: 50px;
+  overflow: hidden;
+  margin: 3vw 0;
 }
 
 .swiper {
-  padding: 14px calc(60px - 0.2vw);
+  padding: 0 calc(60px - 0.2vw);
+  overflow: visible;
 }
 
 .slider-theme {
-  padding: 0 60px;
+  padding: 0 60px 0 60px;
   font-size: 1.4vw;
   font-weight: 500;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
 }
 
 .swiper-slide.slider-slide {
@@ -251,7 +258,7 @@ body {
   right: 60px;
   left: auto;
   bottom: auto;
-  top: 0;
+  top: -18px;
   display: flex;
   justify-content: end;
   align-items: center;
