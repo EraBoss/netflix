@@ -13,7 +13,7 @@
         overflow: visible;
     }
     .slider-theme {
-        padding: 0 4%; 
+        padding: 0 4%;  
     }
     .swiper-pagination.slider-pagination {
         right: 4%;
@@ -22,6 +22,25 @@
         padding: 20px 4% 15px;
     }
 }
+//1200
+//head
+&__logo {
+    margin-right: 30px;
+}
+&__nav-link {
+    color:#fff;
+    font-size: calc(1.2 * 0.75vw);
+    margin-left: 18px;
+}
+//950 head
+
+//885 browse + head + head buttons
+
+//800 footer links flex 50%
+
+//480 header + head buttons
+
+//400 search none
 
 
 
