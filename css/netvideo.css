@@ -77,7 +77,14 @@ body {
   background: #141414;
 }
 
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
+  flex: 0 0 auto;
   z-index: 3;
   padding: 20px 0;
   position: fixed;
@@ -137,6 +144,10 @@ body {
   padding: 0 60px;
 }
 
+.main {
+  flex: 1 0 auto;
+  padding-bottom: 50px;
+}
 .billboard {
   position: relative;
   height: 56.25vw;
@@ -214,12 +225,13 @@ body {
   bottom: 0;
   background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0) 0, hsla(0, 0%, 8%, 0.15) 15%, hsla(0, 0%, 8%, 0.35) 29%, hsla(0, 0%, 8%, 0.58) 44%, #141414 68%, #141414);
 }
-.billboard__slider-section.slider-section {
-  margin: 0;
+.billboard__slider {
+  background-image: linear-gradient(180deg, hsla(0, 0%, 8%, 0) 0, hsla(0, 0%, 8%, 0.15) 15%, hsla(0, 0%, 8%, 0.35) 29%, hsla(0, 0%, 8%, 0.58) 44%, #141414 68%, #141414);
 }
+
 .slider-section {
   overflow: hidden;
-  margin: 3vw 0;
+  padding-bottom: 3vw;
 }
 
 .swiper {
@@ -229,9 +241,12 @@ body {
 
 .slider-theme {
   padding: 0 60px 0 60px;
+  margin-bottom: 14px;
+}
+.slider-theme a {
   font-size: 1.4vw;
   font-weight: 500;
-  margin-bottom: 0.8rem;
+  color: #e5e5e5;
   line-height: 1.3;
 }
 
@@ -290,4 +305,55 @@ body {
 
 .swiper-button-next.slider-button-next::after {
   color: rgb(255, 255, 255);
+}
+
+.footer {
+  flex: 0 0 auto;
+  padding: 20px 60px 15px;
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  max-width: 980px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.footer__social {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.footer__social-link {
+  color: white;
+  margin-right: 15px;
+}
+.footer__social-link svg {
+  width: 38px;
+  height: 27px;
+}
+.footer__nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  margin-bottom: 14px;
+}
+.footer__nav-link {
+  flex: 0 0 25%;
+  color: grey;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.footer__service-code-button {
+  align-self: start;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  background-color: #141414;
+  color: grey;
+  font-size: 14px;
+  padding: 0.5em;
+}
+.footer__span {
+  color: grey;
+  font-size: 12px;
+  line-height: 1;
 }
