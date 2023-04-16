@@ -24,14 +24,44 @@
 }
 //1200
 //head
-&__logo {
-    margin-right: 30px;
+
+@media(max-width:1200px) {
+    .header {
+        &__nav-link {
+            font-size: calc(1.2 * 0.75vw);
+        }
+    } 
 }
-&__nav-link {
-    color:#fff;
-    font-size: calc(1.2 * 0.75vw);
-    margin-left: 18px;
+@media(max-width:1150px) {
+    .header {
+        &__logo {
+            margin-right: 0;
+        }      
+    } 
 }
+
+@media(max-width:1150px) {
+    .header {
+        &__logo {
+            margin-right: 5px;
+        }      
+    } 
+}
+
+@media(max-width:950px) {
+    .header {   
+        &__body {
+            height: 41px;
+        }
+        &__logo-img {
+            width: 64px;
+        }  
+        &__account-arrow-svg-cont {
+            display: none;
+        }
+    } 
+}
+
 //950 head
 
 //885 browse + head + head buttons

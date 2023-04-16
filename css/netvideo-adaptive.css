@@ -19,3 +19,29 @@
     padding: 20px 4% 15px;
   }
 }
+@media (max-width: 1200px) {
+  .header__nav-link {
+    font-size: 0.9vw;
+  }
+}
+@media (max-width: 1150px) {
+  .header__logo {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1150px) {
+  .header__logo {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 950px) {
+  .header__body {
+    height: 41px;
+  }
+  .header__logo-img {
+    width: 64px;
+  }
+  .header__account-arrow-svg-cont {
+    display: none;
+  }
+}

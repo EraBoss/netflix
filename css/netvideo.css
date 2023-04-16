@@ -87,7 +87,6 @@ body {
 .header {
   flex: 0 0 auto;
   z-index: 3;
-  padding: 20px 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -100,6 +99,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 68px;
 }
 .header__left {
   display: flex;
@@ -137,11 +137,23 @@ body {
   color: #fff;
 }
 .header__account {
-  border-radius: 3px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
 }
 .header__account-icon {
   width: 32px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.header__account-arrow-svg-cont {
+  margin-left: 10px;
+}
+.header__account-arrow-svg-cont svg {
+  color: #fff;
+  width: 20px;
+  height: 20px;
 }
 
 .container {
