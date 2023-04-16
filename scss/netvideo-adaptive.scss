@@ -1,0 +1,45 @@
+
+@media (max-width:1500px) {
+    .container {
+        padding: 0 4%;
+    }
+    .billboard {
+        &__logo-and-text {
+            left: 4%;
+        }
+    }
+    .swiper {
+        padding: 0 calc(4% - 0.2vw) ;
+        overflow: visible;
+    }
+    .slider-theme {
+        padding: 0 4%; 
+    }
+    .swiper-pagination.slider-pagination {
+        right: 4%;
+    }
+    .footer {
+        padding: 20px 4% 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
