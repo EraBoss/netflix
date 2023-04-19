@@ -50,4 +50,12 @@
   .slider-theme a {
     font-size: 12px;
   }
+  .footer__nav-link {
+    flex: 0 0 50%;
+  }
+}
+@media (max-width: 500px) {
+  .main__preload-sliders {
+    margin-top: -10vw;
+  }
 }

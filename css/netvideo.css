@@ -165,7 +165,7 @@ body {
   padding-bottom: 50px;
 }
 .main__preload-sliders {
-  margin-top: calc(-13vw + 15px);
+  margin-top: -13vw;
 }
 
 .billboard {
