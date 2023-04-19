@@ -59,6 +59,19 @@
     } 
 }
 
+@media(max-width:885px) {
+    .header {
+        &__browse-burger-menu {
+            display: flex;
+            span {
+            }
+        }
+        &__nav-link {
+            display: none;
+        }
+    } 
+}
+
 @media(max-width:800px) {
     .slider-theme {
         a {

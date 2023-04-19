@@ -46,6 +46,14 @@
     display: none;
   }
 }
+@media (max-width: 885px) {
+  .header__browse-burger-menu {
+    display: flex;
+  }
+  .header__nav-link {
+    display: none;
+  }
+}
 @media (max-width: 800px) {
   .slider-theme a {
     font-size: 12px;

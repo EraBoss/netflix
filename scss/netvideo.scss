@@ -32,6 +32,8 @@ body {
 
     &__left {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &__logo {
@@ -41,14 +43,33 @@ body {
     &__logo-img {
         width: 92.5px;
     }
-
+    &__browse-burger-menu {
+        margin-left: 18px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        span {
+            color:#fff;
+            font-weight: bold;
+            font-size: calc(1.2 * 1.2vw);
+        }
+    }
+    &__browse-burger-arrow-svg-cont {
+        width: 20px;
+        height: 20px;
+        svg {     
+            color: #fff;
+            width: 100%;
+            height: 100%;
+        }
+    }
     &__nav {
         display: flex;
         align-self: center;
     }
 
     &__nav-link {
-        color:#fff;
+        color: #e5e5e5;
         font-size: 14px;
         margin-left: 18px;
     }
@@ -89,10 +110,12 @@ body {
     }
     &__account-arrow-svg-cont {
         margin-left: 10px;
+        width: 20px;
+        height: 20px;
         svg {     
             color: #fff;
-            width: 20px;
-            height: 20px;
+            width: 100%;
+            height: 100%;
         }
     }
 }
