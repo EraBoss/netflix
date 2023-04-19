@@ -45,3 +45,8 @@
     display: none;
   }
 }
+@media (max-width: 800px) {
+  .slider-theme a {
+    font-size: 12px;
+  }
+}
