@@ -276,15 +276,16 @@ body {
 .slider-button-prev, .slider-button-next {
   z-index: 3;
   position: absolute;
-  width: calc(4% - 0.2vw);
+  width: calc(60px - 0.2vw);
   top: 0;
   height: 100%;
   background: hsla(0, 0%, 8%, 0.7);
   margin-top: 0;
 }
 .slider-button-prev::after, .slider-button-next::after {
-  font-size: 3vw;
+  font-size: 1.5vw;
   font-weight: bold;
+  transform: scale(1.25);
 }
 
 .slider-button-prev {
