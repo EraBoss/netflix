@@ -28,21 +28,12 @@
         padding: 20px 4% 15px;
     }
 }
-//1200
-//head
 
 @media(max-width:1200px) {
     .header {
         &__nav-link {
             font-size: calc(1.2 * 0.75vw);
         }
-    } 
-}
-@media(max-width:1150px) {
-    .header {
-        &__logo {
-            margin-right: 0;
-        }      
     } 
 }
 

@@ -32,11 +32,6 @@
 }
 @media (max-width: 1150px) {
   .header__logo {
-    margin-right: 0;
-  }
-}
-@media (max-width: 1150px) {
-  .header__logo {
     margin-right: 5px;
   }
 }
