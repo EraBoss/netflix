@@ -29,20 +29,31 @@ const swiper = new Swiper('.swiper', {
         slidesPerView:6,
         slidesPerGroup:6,
       },
-    }
+    },
   }); 
-
+  // changes on click to document
+  document.addEventListener('click', function (params) {
+    // menu burger
+    if(params.target.closest('.header__browse-burger-menu')) {
+      params.target.closest('.header__browse-burger-menu').nextElementSibling.classList.toggle('burger-active');
+    } else {
+      document.querySelector('.header__burger-nav').classList.remove('burger-active');
+    };
+  });
   const header = document.body.querySelector('.header');
+  // header loaded background
   document.addEventListener('DOMContentLoaded',function () {
     if(header.getBoundingClientRect().top + window.pageYOffset == 0) {
         header.style.background = 'linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)';
-    }
+    };
   });
-
+  // header change background at scroll
   window.addEventListener('scroll', function() {
     if(header.getBoundingClientRect().top + window.pageYOffset == 0) {
         header.style.background = 'linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)';
     } else {
         header.style.background = '#141414';
-    }
+    };
   });
+
+  

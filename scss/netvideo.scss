@@ -51,21 +51,51 @@ body {
         span {
             color:#fff;
             font-weight: bold;
-            font-size: calc(1.2 * 1.2vw);
+            font-size: calc(1.2vw + 4px);
         }
     }
     &__browse-burger-arrow-svg-cont {
-        width: 20px;
-        height: 20px;
         svg {     
             color: #fff;
-            width: 100%;
-            height: 100%;
+            height: calc(.75vw * 2.4 + 5px);
+            width: calc(.75vw * 2.4 + 5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
+// burger hidden ul
+	&__burger-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 4%;
+        background-color: rgba(0,0,0,.9);
+        border: 1px solid hsla(0,0%,100%,.15);
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid #e5e5e5;;
+	}
+	&__burger-li {
+        width: 260px;
+        height: 50px;
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+	}
+	&__burger-nav-link {
+        color: #e5e5e5;
+        font-size: 14px;
+	}
+// visible nav
     &__nav {
         display: flex;
         align-self: center;
+    }
+
+    &__nav-li {
+
     }
 
     &__nav-link {
@@ -199,8 +229,6 @@ body {
         justify-content: center;      
         gap: calc(0.8 * 0.75vw); 
         svg {
-            height: 100%;
-            width: 100%;
         }
         span {
             line-height: calc(2.4 * 0.75vw);
@@ -220,8 +248,6 @@ body {
         gap: calc(0.8 * 0.75vw);
         svg {
             color: #fff;
-            height: 100%;
-            width: 100%;
         }
         span {
             line-height: calc(2.4 * 0.75vw);
@@ -405,4 +431,9 @@ body {
         font-size: 12px;
         line-height: 1;
     }
+}
+// js classes 
+//burger active class
+.burger-active {
+    display: flex;
 }

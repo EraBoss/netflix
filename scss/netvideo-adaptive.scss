@@ -59,8 +59,20 @@
     } 
 }
 
+@media(min-width:885px) {
+    .header {
+        &__burger-nav {
+            display: none;
+        }
+    }
+}
+
 @media(max-width:885px) {
     .header {
+        &__logo-img {
+            width: calc(8vw + 30px);
+        }
+
         &__browse-burger-menu {
             display: flex;
             span {
@@ -70,6 +82,31 @@
             display: none;
         }
     } 
+    .billboard {
+        &__buttons {
+            gap: calc(0.8 * 0.75vw + 3px); 
+        }
+        &__play {
+            padding: calc(0.8 * (0.75vw + 3px)) calc(2.4 * (0.75vw + 3px )) calc(0.8 * 0.75vw + 3px) calc(2 * 0.75vw + 3px);     
+            gap: calc(0.8 * 0.75vw + 3px); 
+            span {
+                line-height: calc(2.4 * 0.75vw + 3px);
+                font-size: calc(1.6 * 0.75vw + 3px);
+            }
+        }
+        &__more-info {
+            padding: calc(0.8 * (0.75vw + 3px)) calc(2.4 * (0.75vw + 3px )) calc(0.8 * 0.75vw + 3px) calc(2 * 0.75vw + 3px);
+            gap: calc(0.8 * 0.75vw + 3px);
+            span {
+                line-height: calc(2.4 * 0.75vw + 3px);
+                font-size: calc(1.6 * 0.75vw + 3px);
+            }     
+        }    
+        &__buttons-svg-cont {
+            height: calc(.75vw * 2.4 + 5px);
+            width: calc(.75vw * 2.4 + 5px);
+        }
+    }
 }
 
 @media(max-width:800px) {
@@ -92,15 +129,18 @@
         }
     }
 }
-//950 head
 
-//885 browse + head + head buttons
+@media(max-width:400px) {
+    .header {
+        &__navigation-icons {
+            gap: 10px;
+        }
+        &__search {          
+            display: none;
+        }
+    }
+}
 
-//800 footer links flex 50%
-
-//480 header + head buttons
-
-//400 search none
 
 
 
