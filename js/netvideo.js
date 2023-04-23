@@ -40,6 +40,7 @@ const swiper = new Swiper('.swiper', {
       document.querySelector('.header__burger-nav').classList.remove('burger-active');
     };
   });
+
   const header = document.body.querySelector('.header');
   // header loaded background
   document.addEventListener('DOMContentLoaded',function () {
@@ -47,7 +48,7 @@ const swiper = new Swiper('.swiper', {
         header.style.background = 'linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)';
     };
   });
-  // header change background at scroll
+  // header background change  at scroll
   window.addEventListener('scroll', function() {
     if(header.getBoundingClientRect().top + window.pageYOffset == 0) {
         header.style.background = 'linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)';
@@ -56,4 +57,22 @@ const swiper = new Swiper('.swiper', {
     };
   });
 
+// slider slide hover effect 
+document.addEventListener('mouseover',function (params) {
+  if (params.target.closest('.slider-slide__content')) {
+    params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
+    if(params.target.closest('.slider-slide__content').getBoundingClientRect().left < 100) {
+      params.target.closest('.slider-slide__content').classList.add('slide-content-hover_left');
+    } else if (params.target.closest('.slider-slide__content').getBoundingClientRect().right > document.documentElement.clientWidth - 100) {
+      params.target.closest('.slider-slide__content').classList.add('slide-content-hover_right');
+    };
+  }
+});
+document.addEventListener('mouseout',function (params) {
+  if (params.target.closest('.slider-slide__content')) {
+    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
+    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left');
+    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_right');
+  }
+})
   
