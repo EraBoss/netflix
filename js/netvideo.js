@@ -61,6 +61,7 @@ const swiper = new Swiper('.swiper', {
 document.addEventListener('mouseover',function (params) {
   if (params.target.closest('.slider-slide__content')) {
     params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
+    params.target.closest('.slider-slide__content').style.width = ( 1.5 *  parseFloat(getComputedStyle(params.target.closest('.slider-slide__content').parentElement).width)) + 'px';
     if(params.target.closest('.slider-slide__content').getBoundingClientRect().left < 100) {
       params.target.closest('.slider-slide__content').classList.add('slide-content-hover_left');
     } else if (params.target.closest('.slider-slide__content').getBoundingClientRect().right > document.documentElement.clientWidth - 100) {
@@ -71,6 +72,7 @@ document.addEventListener('mouseover',function (params) {
 document.addEventListener('mouseout',function (params) {
   if (params.target.closest('.slider-slide__content')) {
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
+    params.target.closest('.slider-slide__content').style.width = 100 + '%';
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left');
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_right');
   }

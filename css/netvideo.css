@@ -376,7 +376,7 @@ body {
   padding-bottom: 56.25%;
   border-radius: 0.2vw;
   overflow: hidden;
-  background: #000;
+  background: #141414;
 }
 .slider-slide__title:hover ~ .slider-slide__description {
   display: flex;
@@ -392,7 +392,7 @@ body {
   padding: 16px;
   flex-direction: column;
   display: none;
-  background: #000;
+  background: #141414;
   overflow: hidden;
 }
 .slider-slide__description:hover {
@@ -559,10 +559,10 @@ body {
   z-index: 3;
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 372px;
   top: 0;
   right: auto;
   left: 50%;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
 }
 
 .slide-content-hover.slide-content-hover_left {
