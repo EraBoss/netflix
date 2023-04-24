@@ -313,7 +313,7 @@ body {
 
 
 .slider-theme {
-    padding: 0 60px 0 60px; 
+    padding: 0  60px 0 calc(60px + 0.2vw); 
     margin-bottom: calc(0.75vw + 6px);
     a {
         font-size: 1.4vw;
@@ -551,13 +551,13 @@ body {
     left: 50%;
 }
 .slide-content-hover.slide-content-hover_left {
-    left: 0;
+    left: 0.2vw;
     right: auto;
     transform: translate(0,-50%);
 }
 .slide-content-hover.slide-content-hover_right {
     left: auto;
-    right: 0;
+    right: 0.2vw;
     transform: translate(0,-50%);
 }
 
