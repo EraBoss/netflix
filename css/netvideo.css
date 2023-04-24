@@ -371,11 +371,13 @@ body {
 .slider-slide {
   position: relative;
 }
+.slider-slide__content {
+  border-radius: 6px;
+  overflow: hidden;
+}
 .slider-slide__title {
   position: relative;
   padding-bottom: 56.25%;
-  border-radius: 0.2vw;
-  overflow: hidden;
   background: #141414;
 }
 .slider-slide__title:hover ~ .slider-slide__description {

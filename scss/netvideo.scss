@@ -335,13 +335,13 @@ body {
 .slider-slide {
     position: relative;
     &__content {
+        border-radius: 6px;
+        overflow: hidden;
     }
 
     &__title {
     position: relative;
     padding-bottom: 56.25%;
-    border-radius: 0.2vw;
-    overflow: hidden;
     background: #141414;
     &:hover ~ .slider-slide__description {
         display: flex;
