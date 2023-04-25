@@ -6,7 +6,7 @@
     left: 4%;
   }
   .swiper {
-    padding: 0 calc(4% - 0.2vw);
+    padding: 0 4%;
     overflow: visible;
   }
   .slider-theme {
