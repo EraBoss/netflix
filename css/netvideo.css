@@ -368,6 +368,29 @@ body {
   padding: 0 0.2vw;
 }
 
+.slide-content-hover {
+  width: 150%;
+  z-index: 3;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  right: auto;
+  left: 50%;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
+}
+
+.slide-content-hover.slide-content-hover_left {
+  left: 0.2vw;
+  right: auto;
+  transform: translate(0, -50%);
+}
+
+.slide-content-hover.slide-content-hover_right {
+  left: auto;
+  right: 0.2vw;
+  transform: translate(0, -50%);
+}
+
 .slider-slide {
   position: relative;
 }
@@ -555,28 +578,6 @@ body {
 
 .burger-active {
   display: flex;
-}
-
-.slide-content-hover {
-  z-index: 3;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 0;
-  right: auto;
-  left: 50%;
-  box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
-}
-
-.slide-content-hover.slide-content-hover_left {
-  left: 0.2vw;
-  right: auto;
-  transform: translate(0, -50%);
-}
-
-.slide-content-hover.slide-content-hover_right {
-  left: auto;
-  right: 0.2vw;
-  transform: translate(0, -50%);
 }
 
 .code-button {
