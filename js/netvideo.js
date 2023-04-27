@@ -60,6 +60,8 @@ const swiper = new Swiper('.swiper', {
 // slider slide hover effect 
 document.addEventListener('mouseover',function (params) {
   if (params.target.closest('.slider-slide__content')) {
+    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left');
+    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_right');
     params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
     if(params.target.closest('.slider-slide__content').getBoundingClientRect().left < 100) {
       params.target.closest('.slider-slide__content').classList.add('slide-content-hover_left');
@@ -71,8 +73,6 @@ document.addEventListener('mouseover',function (params) {
 document.addEventListener('mouseout',function (params) {
   if (params.target.closest('.slider-slide__content')) {
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
-    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left');
-    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_right');
   }
 })
   
