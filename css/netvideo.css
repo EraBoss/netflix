@@ -322,7 +322,7 @@ body {
 
 .slider-button-prev, .slider-button-next {
   position: absolute;
-  width: calc(60px - 0.2vw);
+  width: calc(60px - 0.2vw + 1px);
   top: 0;
   height: 100%;
   background: hsla(0, 0%, 8%, 0.7);
@@ -369,8 +369,8 @@ body {
 }
 
 .slider-slide__content.slide-content-hover {
-  width: 150%;
   z-index: 3;
+  width: 150%;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
 }
 
@@ -389,6 +389,9 @@ body {
 .slider-slide {
   position: relative;
 }
+.slider-slide__container {
+  padding-bottom: 56.25%;
+}
 .slider-slide__content {
   transition: width 1s;
   width: calc(100% - 0.4vw);
@@ -396,7 +399,7 @@ body {
   overflow: hidden;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 0;
+  top: 50%;
   right: auto;
   left: 50%;
 }
