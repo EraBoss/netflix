@@ -75,4 +75,4 @@ document.addEventListener('mouseout',function (params) {
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
   }
 })
-  
+   

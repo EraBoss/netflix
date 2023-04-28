@@ -13,7 +13,7 @@ spollerContainer.addEventListener('click', function (params) {
                 el.style.maxHeight = null;
                 el.style.padding = '0 24px';
                 el.previousElementSibling.classList.remove('rotate');
-            })
+            }) 
         } else { 
             spollerTexts.forEach((el) => {
                 el.style.maxHeight = null;
