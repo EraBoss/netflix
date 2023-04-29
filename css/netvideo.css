@@ -322,7 +322,7 @@ body {
 
 .slider-button-prev, .slider-button-next {
   position: absolute;
-  width: calc(60px - 0.2vw);
+  width: calc(60px - 0.2vw + 1px);
   top: 0;
   height: 100%;
   background: hsla(0, 0%, 8%, 0.7);
