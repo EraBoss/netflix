@@ -374,9 +374,6 @@ body {
             transition: border-radius 0s 0.5s;
             }
             &>.slider-slide__description>.slider-slide__description-container {
-                //and create for this container with background for opacity
-                //need set this properties from js
-                max-height: 130px;
                 padding: 16px;
                 transition: max-height 0.3s ease-out 0.5s, padding 0.3s ease-out 0.5s, opacity 0.3s ease-out 0.5s;
                 opacity: 1;
