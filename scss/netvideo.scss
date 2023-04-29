@@ -332,7 +332,6 @@ body {
 }
 
 .slider-slide__content.slide-content-hover {
-    z-index: 3;
     width: 150%;
     transition: width 0.3s ease-out 0.5s;
 }
@@ -410,7 +409,7 @@ body {
         flex-direction: column;
         display: flex;
         max-height: 0;
-        transition: max-height 0.3s ease-out , padding 0.3s ease-out, opacity ease-out 0.3s;
+        transition: max-height 0.3s ease-out , padding 0.3s ease-out, opacity ease-out 0.2s;
     }
 	&__description-buttons-section {
         display: flex;
@@ -582,7 +581,14 @@ body {
         line-height: 1;
     }
 }
-// js classes 
+// z-index to slide hover
+.z-index-2 {
+    z-index: 2;
+}
+.z-index-3 {
+    z-index: 3;
+}
+
 //burger active class
 .burger-active {
     display: flex;

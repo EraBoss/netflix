@@ -368,7 +368,6 @@ body {
 }
 
 .slider-slide__content.slide-content-hover {
-  z-index: 3;
   width: 150%;
   transition: width 0.3s ease-out 0.5s;
 }
@@ -443,7 +442,7 @@ body {
   flex-direction: column;
   display: flex;
   max-height: 0;
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity ease-out 0.3s;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity ease-out 0.2s;
 }
 .slider-slide__description-buttons-section {
   display: flex;
@@ -596,6 +595,14 @@ body {
   color: grey;
   font-size: 12px;
   line-height: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
 }
 
 .burger-active {

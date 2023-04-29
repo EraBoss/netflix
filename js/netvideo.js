@@ -46,6 +46,8 @@ const swiper = new Swiper('.swiper', {
   document.addEventListener('DOMContentLoaded',function () {
     if(header.getBoundingClientRect().top + window.pageYOffset == 0) {
         header.style.background = 'linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)';
+    } else {
+      header.style.background = '#141414';
     };
   });
   // header background change  at scroll
@@ -60,19 +62,40 @@ const swiper = new Swiper('.swiper', {
 // slider slide hover effect 
 document.addEventListener('mouseover',function (params) {
   if (params.target.closest('.slider-slide__content')) {
-    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left');
-    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_right');
+    
+    // z-index at hover
+    if(params.target.closest('.slider-slide__content').classList.contains('z-index-2')) {
+      setTimeout(() => {
+        params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
+        params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
+        params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
+        params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
+        params.target.closest('.slider-slide__content').classList.remove('z-index-2','z-index-3');
+        params.target.closest('.slider-slide__content').classList.add('z-index-3');
+    },300);
+    } else {
+      params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
+      params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
+      params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
+      params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
+      params.target.closest('.slider-slide__content').classList.remove('z-index-2','z-index-3');
+      params.target.closest('.slider-slide__content').classList.add('z-index-3');
+    };
+    // hover effect with classes
+    params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left','slide-content-hover_right');
     params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
+    // left and right slide hover
     if(params.target.closest('.slider-slide__content').getBoundingClientRect().left < 100) {
       params.target.closest('.slider-slide__content').classList.add('slide-content-hover_left');
     } else if (params.target.closest('.slider-slide__content').getBoundingClientRect().right > document.documentElement.clientWidth - 100) {
       params.target.closest('.slider-slide__content').classList.add('slide-content-hover_right');
     };
-  }
+  };
 });
+// lose hover class
 document.addEventListener('mouseout',function (params) {
   if (params.target.closest('.slider-slide__content')) {
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
-  }
+  };
 })
    
