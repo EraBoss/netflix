@@ -361,23 +361,36 @@ body {
         top: calc(50%);
         right: auto;
         left: calc(50%);
-        &:hover>.slider-slide__container>.slider-slide__description {
-            //and create for this container with background for opacity
-            //need set this properties from js
-            max-height: 100px;
-            padding: 16px;
-            transition: max-height 0.3s ease-out 0.5s, padding 0.3s ease-out 0.5s;
-        }
     }
     &__container { 
-        box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
-        border-radius: 6px;
-        overflow: hidden;
+        width: 100%;
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
+            transition: box-shadow 0s 0.5s;
+            border-radius: 6px;
+            overflow: hidden;
+
+            &>.slider-slide__title {
+            border-radius: 6px 6px 0 0;
+            transition: border-radius 0s 0.5s;
+            }
+            &>.slider-slide__description>.slider-slide__description-container {
+                //and create for this container with background for opacity
+                //need set this properties from js
+                max-height: 130px;
+                padding: 16px;
+                transition: max-height 0.3s ease-out 0.5s, padding 0.3s ease-out 0.5s, opacity 0.3s ease-out 0.5s;
+                opacity: 1;
+            }
+        }
+        
     }
 
     &__title {
     position: relative;
     padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 6px;
     img {
         position: absolute;
         width: 100%;  
@@ -388,16 +401,16 @@ body {
 
     } 
 	&__description {
+        background: #141414;
+    }
+    &__description-container {
+        pointer-events: none;
+        opacity: 0;
         padding: 0 16px;
         flex-direction: column;
         display: flex;
         max-height: 0;
-        background: #141414;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out , padding 0.3s ease-out ;
-    }
-    &__description-container {
-        
+        transition: max-height 0.3s ease-out , padding 0.3s ease-out, opacity ease-out 0.3s;
     }
 	&__description-buttons-section {
         display: flex;
