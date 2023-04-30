@@ -72,7 +72,7 @@ document.addEventListener('mouseover',function (params) {
     params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
     // slide description hover effect
     console.log(params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').scrollHeight);
-    params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').style.maxHeight = params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').scrollHeight + 10 + 'px';
+    params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').style.maxHeight = params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').scrollHeight + 32 + 'px';
     // left and right slide hover
     if(params.target.closest('.slider-slide__content').getBoundingClientRect().left < 100) {
       params.target.closest('.slider-slide__content').classList.add('slide-content-hover_left');
