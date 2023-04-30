@@ -64,23 +64,9 @@ document.addEventListener('mouseover',function (params) {
   if (params.target.closest('.slider-slide__container')) {
     
     // z-index at hover
-    if(params.target.closest('.slider-slide__content').classList.contains('z-index-2')) {
-      setTimeout(() => {
-        params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
-        params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
-        params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
-        params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
-        params.target.closest('.slider-slide__content').classList.remove('z-index-2','z-index-3');
-        params.target.closest('.slider-slide__content').classList.add('z-index-3');
-    },300);
-    } else {
-      params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
-      params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.add('z-index-2');
-      params.target.closest('.slider-slide').previousElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
-      params.target.closest('.slider-slide').nextElementSibling?.querySelector('.slider-slide__content').classList.remove('z-index-3');
-      params.target.closest('.slider-slide__content').classList.remove('z-index-2','z-index-3');
+    setTimeout(()=> {
       params.target.closest('.slider-slide__content').classList.add('z-index-3');
-    };
+    },300)
     // hover effect with classes
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left','slide-content-hover_right');
     params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
@@ -98,6 +84,11 @@ document.addEventListener('mouseover',function (params) {
 // lose hover class
 document.addEventListener('mouseout',function (params) {
   if (params.target.closest('.slider-slide__content')) {
+    // z-index lose
+    setTimeout(()=> {
+      params.target.closest('.slider-slide__content').classList.remove('z-index-3');
+    },300)
+    // lose hover effect
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
     params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').style.maxHeight = 0;
   };
