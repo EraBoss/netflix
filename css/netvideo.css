@@ -316,7 +316,7 @@ body {
 }
 
 .swiper {
-  padding: 0 60px;
+  padding: 0 calc(60px - 0.2vw);
   overflow: visible;
 }
 
