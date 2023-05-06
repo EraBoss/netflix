@@ -25,14 +25,9 @@ spollerContainer.addEventListener('click', function (params) {
             params.target.classList.add('rotate');
         }
     };
-    // get started button
-    if (params.target.closest('.block-1__button-link')) {
-        if(!params.target.previousElementSibling.firstElementChild.value) {
-            params.target.previousElementSibling.firstElementChild.focus();
-        }
-    }
 });
 document.addEventListener('click', function (params) {
+    // get started button
     if (params.target.closest('.block-1__button-link')) {
         if(!params.target.previousElementSibling.firstElementChild.value) {
             params.target.previousElementSibling.firstElementChild.focus();
