@@ -1,4 +1,42 @@
 const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+  slidesPerView:2,
+  slidesPerGroup:2,
+  // Pagination 
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.slider-button-next',
+    prevEl: '.slider-button-prev',
+  }, 
+  breakpoints: {
+    500: {
+      slidesPerView:3,
+      slidesPerGroup:3,
+    },
+    800: {
+      slidesPerView:4,
+      slidesPerGroup:4,
+    },
+    1100: {
+      slidesPerView:5,
+      slidesPerGroup:5,
+    },
+    1400: {
+      slidesPerView:6,
+      slidesPerGroup:6,
+    },
+  },
+}); 
+// принимает как аргумент секцию с каруселью и инициализирует его
+const initSlider = function(newSwiperSlider) {
+  // Находим карусель внутри секции
+  let newSwiperElement  = newSwiperSlider.querySelector('.swiper')
+  // Инициализируем новую карусель
+  let newSwiper = new Swiper(newSwiperElement, {
     // Optional parameters
     loop: true,
     slidesPerView:2,
@@ -30,7 +68,11 @@ const swiper = new Swiper('.swiper', {
         slidesPerGroup:6,
       },
     },
-  }); 
+  });
+};
+
+
+
   // changes on click to document
   document.addEventListener('click', function (params) {
     // menu burger
@@ -71,7 +113,6 @@ document.addEventListener('mouseover',function (params) {
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover_left','slide-content-hover_right');
     params.target.closest('.slider-slide__content').classList.add('slide-content-hover');
     // slide description hover effect
-    console.log(params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').scrollHeight);
     params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').style.maxHeight = params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').scrollHeight + 32 + 'px';
     // left and right slide hover
     if(params.target.closest('.slider-slide__content').getBoundingClientRect().left < 100) {
@@ -92,5 +133,62 @@ document.addEventListener('mouseout',function (params) {
     params.target.closest('.slider-slide__content').classList.remove('slide-content-hover');
     params.target.closest('.slider-slide__content').querySelector('.slider-slide__description-container').style.maxHeight = 0;
   };
-})
+});
+
+// Content load at scroll
+let scrollSliders = document.querySelector('.main__scroll-sliders');
+let page = 0;
+let isLoading = false;
+
+const loadContent = async function() {
+    if (!isLoading && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        await getContent();
+    }
+};
+
+const getContent = async function() {
+    try {
+        isLoading = true;
+        const response = await fetch('sourceSliders.html');
+        if(response.ok) {
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const items = doc.querySelectorAll('.slider-section');
+            if(page == items.length) {
+                window.removeEventListener('scroll', loadContent)
+            };
+            if(page < items.length) {
+              let newSlider = items[page]
+              scrollSliders.insertAdjacentElement('beforeend',newSlider); 
+              initSlider(newSlider);  
+            };
+            page++;
+        };
+        isLoading = false;
+    } catch(err) {
+        console.log(err);
+        let storedSlidersArray = JSON.parse(localStorage.getItem('slidersArray'));
+        let div = document.createElement('div');
+        storedSlidersArray.forEach(element => {
+            div.innerHTML += element;
+        });
+        let items = div.querySelectorAll('.slider-section');
+        if(page == items.length) {
+            window.removeEventListener('scroll', loadContent)
+        };
+        if(page < items.length) {
+          let newSlider = items[page]
+          scrollSliders.insertAdjacentElement('beforeend',newSlider); 
+          initSlider(newSlider);  
+        };
+        page++;
+        isLoading = false;
+    }
+};
+
+window.addEventListener('scroll',loadContent);
+
+
+
+
    
