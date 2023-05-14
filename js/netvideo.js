@@ -12,6 +12,7 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.slider-button-next',
     prevEl: '.slider-button-prev',
   }, 
+  //adaptive
   breakpoints: {
     500: {
       slidesPerView:3,
@@ -50,6 +51,7 @@ const initSlider = function(newSwiperSlider) {
       nextEl: '.slider-button-next',
       prevEl: '.slider-button-prev',
     }, 
+    // adaptive
     breakpoints: {
       500: {
         slidesPerView:3,
@@ -71,17 +73,6 @@ const initSlider = function(newSwiperSlider) {
   });
 };
 
-// async function wait(second) {
-//   return new Promise(function(resolve) {
-//     setTimeout(resolve, second * 1000)
-//   })
-// }
-
-// (async function() {
-//   await wait(3)
-//   console.log('era');
-// }())
-
   // changes on click to document
   document.addEventListener('click', function (params) {
     // menu burger
@@ -91,7 +82,7 @@ const initSlider = function(newSwiperSlider) {
       document.querySelector('.header__burger-nav').classList.remove('burger-active');
     };
   });
-
+  // header 
   const header = document.body.querySelector('.header');
   // header loaded background
   document.addEventListener('DOMContentLoaded',function () {
@@ -101,7 +92,7 @@ const initSlider = function(newSwiperSlider) {
       header.style.background = '#141414';
     };
   });
-  // header background change  at scroll
+  // change header background at scroll
   window.addEventListener('scroll', function() {
     if(header.getBoundingClientRect().top + window.pageYOffset == 0) {
         header.style.background = 'linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent)';
@@ -110,8 +101,8 @@ const initSlider = function(newSwiperSlider) {
     };
   });
 
-let mouseOnSlide = false;
 // slider slide hover effect 
+let mouseOnSlide = false;
 document.addEventListener('mouseover',function (params) {
   if (params.target.closest('.slider-slide__container')) {
     if(!mouseOnSlide) {
