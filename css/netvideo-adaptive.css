@@ -16,7 +16,7 @@
     right: 4%;
   }
   .slider-button-prev, .slider-button-next {
-    width: calc(4% - 0.2vw);
+    width: calc(4% - 0.4vw);
   }
   .slider-button-prev::after, .slider-button-next::after {
     font-size: 2.5vw;
