@@ -5,8 +5,6 @@
 }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -321,8 +319,9 @@ body {
 }
 
 .slider-button-prev, .slider-button-next {
+  z-index: 4;
   position: absolute;
-  width: calc(60px - 0.4vw);
+  width: calc(60px - 0.38vw);
   transform: translate(0, -50%);
   top: 50%;
   height: calc(100% - 0.225vw);
