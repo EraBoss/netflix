@@ -159,12 +159,13 @@ const getContent = async function(htmlEl) {
     return;
   }
   console.log('era');
-  const url = 'https://streaming-availability.p.rapidapi.com/shows/search/filters?country=br&series_granularity=show&genres=action&order_direction=asc&genres_relation=and&output_language=en&catalogs=netflix&show_type=movie';
-const options = {
+  const url = `https://streaming-availability.p.rapidapi.com/shows/search/filters?country=gb&series_granularity=show&genres=${genres[page]}&genres_relation=and&output_language=en&show_type=movie`;
+page++;
+  const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'aab048825emsh2d4658e96e68df4p16471ejsn1e92caa60224',
-		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+		'x-rapidapi-key': '413491b2ccmshcdc12a0a9290a34p1cd0e4jsne4fdc56e6d56',
+    'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
 	}
 };
 
