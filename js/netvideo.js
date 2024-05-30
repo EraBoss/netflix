@@ -144,7 +144,8 @@ let scrollSliders = document.querySelector('.main__scroll-sliders');
 let page = 0
 let second = 0;
 let isLoading = false;
-let genres = ['scifi','war%2Cdrama','romance%2Ccomedy','action']
+let genres = ['scifi','war%2Cdrama','romance%2Ccomedy','action'];
+let genresTitle = ['Scifi','War Drama','Romance Comedy','Action'];
 
 const loadContent = async function() {
     if (!isLoading && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
@@ -153,6 +154,11 @@ const loadContent = async function() {
 };
 
 const getContent = async function(htmlEl) {
+  if (second == genres.length) {
+    window.removeEventListener('scroll', loadContent);
+    return;
+  }
+  console.log('era');
   const url = `https://streaming-availability.p.rapidapi.com/shows/search/filters?country=gb&series_granularity=show&genres=${genres[page]}&genres_relation=and&output_language=en&catalogs=netflix&show_type=movie`;
   page++;
   const options = {
@@ -240,7 +246,7 @@ const getContent = async function(htmlEl) {
         const sliderElement = document.createElement('div');
         sliderElement.className = 'slider-section';
         sliderElement.innerHTML = `
-        <h2 class="slider-theme" ><a href="">Popular on Netflix</a></h2>
+        <h2 class="slider-theme" ><a href="">${genresTitle[second]}</a></h2>
         <div class="swiper slider">
             <div class="swiper-pagination slider-pagination"></div>                   
             <div class="swiper-wrapper slider-wrapper sliderNumber${second}"></div>
@@ -277,7 +283,7 @@ const getContent = async function(htmlEl) {
     }
 };
 
-window.addEventListener('scroll',loadContent);
+window.addEventListener('scroll', loadContent);
 
 
 
