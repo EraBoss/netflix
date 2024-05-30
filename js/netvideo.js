@@ -91,7 +91,9 @@ const initSlider = function(newSwiperSlider) {
     } else {
       header.style.background = '#141414';
     };
-    loadContent(preloadSliders);
+    for (let i = 0; i < 3; i++) {
+      await preloadContent(preloadSliders);
+  }
   });
   // change header background at scroll
   window.addEventListener('scroll', function() {
@@ -157,6 +159,12 @@ const loadContent = async function(htmlElement) {
   }
 };
 
+const preloadContent = function(htmlElement) {
+      isLoading = true;
+      getContent(htmlElement);
+      isLoading = false;
+};
+
 const getContent = async function(htmlElement) {
   if (second === genres.length) {
       window.removeEventListener('scroll', scrollHandler);
@@ -169,8 +177,8 @@ const getContent = async function(htmlElement) {
   const options = {
       method: 'GET',
       headers: {
-          'x-rapidapi-key': '413491b2ccmshcdc12a0a9290a34p1cd0e4jsne4fdc56e6d56',
-          'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
+        'x-rapidapi-key': '95f3cf389fmsh8019614af15e71ep144309jsna7a631d12166',
+        'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
       }
   };
 
